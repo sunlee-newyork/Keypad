@@ -1,11 +1,11 @@
 {
-  "name": "Peloton App",
+  "name": "Keypad App",
   "main": "index.html",
   "version": "1.0",
   "authors": [
     "Sun Lee"
   ],
-  "description": "Peloton Keypad challenge app",
+  "description": "Keypad challenge app",
   "private": true,
   "ignore": [
     "**/.*",

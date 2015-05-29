@@ -5,17 +5,17 @@ var peloApp = angular.module('peloApp', []);
 peloApp.controller('appController', function ($scope, $window) {
 
 	$scope.keys = [
-		{ input: 1, output: "", audio: "/assets/audio/Dtmf1.ogg"},
-		{ input: 2, output: "abc", audio: "/assets/audio/Dtmf2.ogg" },
-		{ input: 3, output: "def", audio: "/assets/audio/Dtmf3.ogg" },
-		{ input: 4, output: "ghi", audio: "/assets/audio/Dtmf4.ogg" },
-		{ input: 5, output: "jkl", audio: "/assets/audio/Dtmf5.ogg" },
-		{ input: 6, output: "mno", audio: "/assets/audio/Dtmf6.ogg" },
-		{ input: 7, output: "pqrs", audio: "/assets/audio/Dtmf7.ogg" },
-		{ input: 8, output: "tuv", audio: "/assets/audio/Dtmf8.ogg" },
-		{ input: 9, output: "wxyz", audio: "/assets/audio/Dtmf9.ogg" },
+		{ input: 1, output: "", audio: "/Keypad/assets/audio/Dtmf1.ogg"},
+		{ input: 2, output: "abc", audio: "/Keypad/assets/audio/Dtmf2.ogg" },
+		{ input: 3, output: "def", audio: "/Keypad/assets/audio/Dtmf3.ogg" },
+		{ input: 4, output: "ghi", audio: "/Keypad/assets/audio/Dtmf4.ogg" },
+		{ input: 5, output: "jkl", audio: "/Keypad/assets/audio/Dtmf5.ogg" },
+		{ input: 6, output: "mno", audio: "/Keypad/assets/audio/Dtmf6.ogg" },
+		{ input: 7, output: "pqrs", audio: "/Keypad/assets/audio/Dtmf7.ogg" },
+		{ input: 8, output: "tuv", audio: "/Keypad/assets/audio/Dtmf8.ogg" },
+		{ input: 9, output: "wxyz", audio: "/Keypad/assets/audio/Dtmf9.ogg" },
 		{ input: "↻", name: "reset" },
-		{ input: 0, output: "", audio: "/assets/audio/Dtmf0.ogg" },
+		{ input: 0, output: "", audio: "/Keypad/assets/audio/Dtmf0.ogg" },
 		{ input: "↩︎", name: "enter" }
 	]
 
