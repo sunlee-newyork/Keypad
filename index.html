@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Peloton App</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" />
+		<meta charset="UTF-8">
+
+		<link rel="stylesheet" type="text/css" href="index.css">
+		
+		<base href="/">
+		<script src="/bower_components/angular/angular.min.js"></script>
+		
+		<script src="/app/scripts/app.js"></script>
+	</head>
+
+	<body class="app" ng-app="peloApp" ng-controller="appController"> 
+
+		<div class="container">
+			<div class="keypad centered">
+				<a class="key-wrapper" ng-repeat="key in keys">
+					<div class="key {{key.name}}" ng-class="" ng-click="keyClicked($index)">{{key.input}}
+						<span class="key-letters">{{key.output}}</span>
+					</div>
+				</a>
+	  	</div>
+
+		  <div class="input centered">
+
+		  	<span class="input-step-1" ng-show="!inputs.length">Click numbers to build a combo.</span>
+
+		  	<div class="input-step-2" ng-show="inputs.length && !refinedOutput.length">
+		  		<span>Click ↩︎ to compute the combo's possibilities.</span>
+		  		<div class="inputs">
+		  			<span ng-repeat="key in inputs track by $index">{{key}}</span>
+		  		</div> 
+		  	</div>
+
+		  	<div class="input-step-3" ng-show="refinedOutput.length">
+		  		<span>Click ↻ to reset inputs.</span>
+		  		<div class="inputs">
+		  			<span ng-repeat="key in inputs">{{key}}</span>
+		  		</div> 
+		  	</div>		  	
+
+		  </div>
+
+		  <div class="output centered" ng-show="refinedOutput.length || noComboMessage">
+		  	<div class="triangle"></div>
+		  	<span ng-if="!noComboMessage">{{refinedOutput.length}} possibilities</span>
+		  	<span ng-if="noComboMessage">{{noComboMessage}}</span>
+		  	<div class="outputs">
+		  		<span ng-repeat="combo in refinedOutput track by $index">{{combo}}</span>
+		  	</div>		  	
+		  </div>
+
+		</div>	  
+
+	</body>	
+
+</html>

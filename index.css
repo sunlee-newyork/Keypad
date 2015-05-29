@@ -1,0 +1,146 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all .1s, background 1ms;
+	-moz-transition: all .1s, background 1ms;
+	-ms-transition: all .1s, background 1ms;
+	transition: all .1s, background 1ms;
+}
+
+body {
+	background-color: rgba(238,238,238,1);
+	margin: 0;
+	font-size: 16px;
+	font-family: "Consolas", Arial, serif;
+}
+
+/* GLOBALS */
+.container {
+  position: relative;
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.centered {
+	margin: 0 auto;
+}
+.keypad,
+.input,
+.output {
+	width: 330px;
+}
+/* end GLOBALS */
+
+/* APP */
+.app > .container {
+	padding: 2% 0 0 0;
+}
+/* end APP */
+
+/* KEYPAD */
+.keypad {
+	height: 450px;
+}
+.keypad .key-wrapper {
+	display: block;
+	float: left;
+	width: 100px;
+	height: 100px;
+	margin: 7px 5px;
+  border-radius: 15px;
+  box-shadow: 0 15px 25px rgba(100,100,100,1);
+  background: -webkit-linear-gradient(top, rgba(255,255,255,1), rgba(230,230,230,1));
+  background: -moz-linear-gradient(bottom, rgba(255,255,255,1), rgba(230,230,230,1));
+  background: -o-linear-gradient(bottom, rgba(255,255,255,1), rgba(230,230,230,1));  
+  background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(230,230,230,1));
+}
+.keypad .key {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	line-height: 110px;
+	text-align: center;
+	font-size: 3.5rem;	
+	border-radius: 15px;
+	box-shadow: 0 7px 0px rgba(60,60,60,1);  
+}
+.keypad .key.reset,
+.keypad .key.enter {
+	font-size: 2rem;
+}
+.keypad .key .key-letters {
+	position: absolute;
+  right: 12px;
+  bottom: -5px;
+  text-transform: uppercase;
+  font-size: .8rem;
+  letter-spacing: 0.8px;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg); 
+  transform: rotate(-90deg);
+}
+.keypad .key-wrapper:active {
+  margin: 10px 5px 4px;
+  box-shadow: 0 5px 8px rgba(100,100,100,1);
+	background: -webkit-linear-gradient(bottom, rgba(255,255,255,1), rgba(230,230,230,1));
+	background: -moz-linear-gradient(top, rgba(255,255,255,1), rgba(230,230,230,1));
+  background: -o-linear-gradient(top, rgba(255,255,255,1), rgba(230,230,230,1));
+  background: linear-gradient(to top, rgba(255,255,255,1), rgba(230,230,230,1));
+}
+.keypad .key-wrapper:active .key {
+	-webkit-box-shadow: 0 3px 0px rgba(60,60,60,1);
+	-moz-box-shadow: 0 3px 0px rgba(60,60,60,1);
+	-ms-box-shadow: 0 3px 0px rgba(60,60,60,1);
+	box-shadow: 0 3px 0px rgba(60,60,60,1);
+}
+/* end KEYPAD */
+
+/* I/O */
+.input,
+.output {
+	min-height: 80px;
+	padding: 40px 0 0px;
+	text-align: center;
+	font-family: Arial, sans-serif;
+	letter-spacing: .5px;
+}
+.output {
+	position: relative;
+	min-height: 40px;
+	padding: 20px 25px;
+	background: #fff;
+}
+.input .inputs,
+.output .outputs {
+	min-height: 50px;
+	padding: 25px 10px;
+}
+.output .outputs {
+	min-height: 1px;
+	padding: 20px 10px 0;
+}
+.input .inputs span,
+.output .outputs span {
+	display: inline-block;
+	margin: 2px 2px;
+	padding: 5px 12px;
+	border-radius: 15px;
+	color: #fff;
+	background: rgba(51,51,51,1);
+}
+.triangle {
+  position: absolute;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid#fff;
+  left: 0;
+  right: 0;
+  width: 15px;
+  margin: 0 auto;
+  top: -15px;
+}
+/* end I/O */
